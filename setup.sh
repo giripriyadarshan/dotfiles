@@ -12,6 +12,9 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
     # install apt packages for Ubuntu x86 Installation only --------------------- Ubuntu x86
     for f in ubuntu-x86/*.txt; do sudo apt install -y $(grep -v '^#' $f); done
     for f in ubuntu-x86/*.sh; do bash "$f" -H; done
+    # rust takes a commandline input to continue ....
+    # so added it in the last so it won't pause other scripts
+    bash rust.sh
     ;;
 1)
     # install apt packages for Raspberry Pi Headless Installation only --------------------- RPi Headless
