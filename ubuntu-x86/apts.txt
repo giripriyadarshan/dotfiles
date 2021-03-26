@@ -1,0 +1,67 @@
+# dev tools
+apt-transport-https
+autoconf
+automake
+bison
+build-essential
+ccache
+cmake
+curl
+default-jdk
+dfu-util
+esptool
+flex
+g++
+gcc
+gcc-arm-linux-gnueabi
+gcc-arm-none-eabi
+gdb-multiarch
+git
+gperf
+lib32stdc++6
+lib32z1
+libc6-i386
+libffi-dev
+libftdi-dev
+libmysqlclient-dev
+libnewlib-arm-none-eabi
+libpq-dev
+libsqlclient-dev
+libsqlite3-dev
+libssl-dev
+libtool
+libusb-1.0-0
+libusb-1.0-0-dev
+ninja-build
+nodejs
+npm
+python3
+python3-distutils
+python3-pip
+python3-serial
+python3-setuptools
+python-is-python3
+rsync
+texinfo
+vim
+wget
+
+# shell
+zsh
+
+# command-line utilities
+gh
+minicom
+tldr
+
+# entertainment and other stuffs
+gimp
+gnome-tweaks
+neofetch
+rpi-imager
+thunderbird
+tixati
+vlc
+
+# pcb design
+--install-recommends kicad

@@ -1,0 +1,22 @@
+# Custom aliases
+
+alias lg='exa --group-directories-first'
+alias lgo='exa --group-directories-first --oneline'
+alias lgt='exa --group-directories-first --tree --long --header'
+alias lls='exa --group-directories-first --header --long'
+alias cargos='cargo install --list'
+
+alias upgrade='sudo apt update && sudo apt upgrade'
+alias update='sudo apt update'
+alias in='sudo apt install'
+alias ulist='sudo apt list --upgradable'
+alias run='chmod +x'
+alias aliases='grep alias ${HOME}/.aliases'
+alias paths='grep export ${HOME}/.aliases'
+
+# Custom paths/exports
+source "$HOME/.cargo/env"
+export PICO_SDK_PATH=/home/work/pico-setup/pico/pico-sdk
+export PICO_EXAMPLES_PATH=/home/work/pico-setup/pico/pico-examples
+export PICO_EXTRAS_PATH=/home/work/pico-setup/pico/pico-extras
+export PICO_PLAYGROUND_PATH=/home/work/pico-setup/pico/pico-playground
