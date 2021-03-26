@@ -32,7 +32,7 @@ function linkDotfile() {
 
 # Link .bash_aliases for non desktop installations like rpi-headless
 
-linkDotfile .vim
+# linkDotfile .vim
 linkDotfile .vimrc
 # linkDotfile .ackrc
 linkDotfile .bashrc

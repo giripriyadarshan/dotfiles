@@ -5,6 +5,8 @@
 
 source menu.sh
 
+clear
+
 case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "CANCEL") in
 0)
     # install apt packages for Ubuntu x86 Installation only --------------------- Ubuntu x86
