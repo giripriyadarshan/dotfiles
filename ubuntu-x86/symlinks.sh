@@ -46,6 +46,9 @@ linkDotfile .gitconfig
 linkDotfile .aliases
 linkDotfile .zshrc
 linkDotfile .profile
+mkdir ${HOME}/.cargo
+linkDotfile .cargo
+linkDotfile .cargo/config
 
 mkdir -p $dotfilesDir/.vim/bundle
 cd $dotfilesDir/.vim/bundle
