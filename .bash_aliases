@@ -1,7 +1,0 @@
-alias upgrade='sudo apt update && sudo apt upgrade'
-alias update='sudo apt update'
-alias in='sudo apt install'
-alias ulist='sudo apt list --upgradable'
-alias run='chmod +x'
-alias aliases='grep alias ${HOME}/.aliases'
-alias paths='grep export ${HOME}/.aliases'

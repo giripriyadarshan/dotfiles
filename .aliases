@@ -5,6 +5,7 @@ alias lgo='exa --group-directories-first --oneline'
 alias lgt='exa --group-directories-first --tree --long --header'
 alias lls='exa --group-directories-first --header --long'
 alias cargos='cargo install --list'
+alias usb='lls /dev/ttyUSB* || lls /dev/ttyACM*'
 
 alias upgrade='sudo apt update && sudo apt upgrade'
 alias update='sudo apt update'

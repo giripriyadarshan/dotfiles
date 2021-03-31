@@ -31,7 +31,8 @@ function linkDotfile() {
 # linkDotfile .folder/.file
 
 # Link .bash_aliases for non desktop installations like rpi-headless
-linkDotfile .bash_aliases
+# changed due to knowledge of that it doesn't make any difference
+# linkDotfile .bash_aliases
 
 # linkDotfile .vim
 # linkDotfile .vimrc
@@ -44,7 +45,7 @@ linkDotfile .gitconfig
 # linkDotfile .xinitrc
 # linkDotfile .curlrc
 # linkDotfile .gf
-# linkDotfile .aliases
+linkDotfile .aliases
 # linkDotfile .zshrc
 linkDotfile .profile
 
