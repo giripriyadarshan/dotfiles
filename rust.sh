@@ -12,3 +12,6 @@ cargo install exa
 cargo install bat
 cargo install starship
 cargo install diesel_cli
+cargo install fd-find
+cargo install ripgrep
+cargo install procs
