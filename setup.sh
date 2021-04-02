@@ -31,6 +31,9 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
     for f in ubuntu-arm-desktop/*.txt; do sudo apt install -y $(grep -v '^#' $f); done
     for f in ubuntu-arm-desktop/*.sh; do bash "$f" -H; done
     ;;
-4) echo "Bye .... see you later" ;;
+4)
+    clear
+    printf "\n\n\n\nBye........ See you next time?\n"
+    ;;
 
 esac
