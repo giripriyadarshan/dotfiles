@@ -1,1 +1,2 @@
-/home/work/dotfiles/.cargo/config
+[target.arm-unknown-linux-gnueabi]
+linker = "arm-linux-gnueabi-gcc"
