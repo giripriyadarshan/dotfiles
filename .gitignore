@@ -1,3 +1,5 @@
 todo.txt
 .cargo/*
 !.cargo/config
+bin/*
+completion_zsh/*

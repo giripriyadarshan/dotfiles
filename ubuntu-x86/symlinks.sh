@@ -47,6 +47,9 @@ linkDotfile .aliases
 linkDotfile .zshrc
 linkDotfile .profile
 linkDotfile .cargo
+# for arduino-cli
+linkDotfile bin
+linkDotfile completion_zsh
 
 mkdir -p $dotfilesDir/.vim/bundle
 cd $dotfilesDir/.vim/bundle

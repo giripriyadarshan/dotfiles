@@ -15,6 +15,7 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
     # rust takes a commandline input to continue ....
     # so added it in the last so it won't pause other scripts
     bash rust.sh
+    bash arduino-cli.sh
     ;;
 1)
     # install apt packages for Raspberry Pi Headless Installation only --------------------- RPi Headless

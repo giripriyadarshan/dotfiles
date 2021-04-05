@@ -21,19 +21,21 @@ alias cargos='cargo install --list'
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 
 ## find shortcuts using ripgrep
-alias aliases='rg alias ~/.aliases'
+alias aliases='rg alias ~/.aliases && rg alias ~/.arduino-cli-alias'
 alias paths='rg export ~/.aliases'
-
-## Custom paths
-alias arduino-cli='~/bin/arduino-cli'
 
 # Custom paths/exports
 
 ## sources
+
+### Rust Cargo
 source "$HOME/.cargo/env"
 
+### Arduino-cli aliases
+source ~/.arduino-cli-alias
+
 ## RPi Pico SDK Development variables
-export PICO_SDK_PATH=/home/work/pico-setup/pico/pico-sdk
-export PICO_EXAMPLES_PATH=/home/work/pico-setup/pico/pico-examples
-export PICO_EXTRAS_PATH=/home/work/pico-setup/pico/pico-extras
-export PICO_PLAYGROUND_PATH=/home/work/pico-setup/pico/pico-playground
+export PICO_SDK_PATH=~/pico-setup/pico/pico-sdk
+export PICO_EXAMPLES_PATH=~/pico-setup/pico/pico-examples
+export PICO_EXTRAS_PATH=~/pico-setup/pico/pico-extras
+export PICO_PLAYGROUND_PATH=~/pico-setup/pico/pico-playground
