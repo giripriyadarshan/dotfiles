@@ -32,6 +32,7 @@ function linkDotfile() {
 
 # Link .bash_aliases for non desktop installations like rpi-headless
 
+mkdir .vim
 linkDotfile .vim
 linkDotfile .vimrc
 # linkDotfile .ackrc
@@ -46,9 +47,14 @@ linkDotfile .gitconfig
 linkDotfile .aliases
 linkDotfile .zshrc
 linkDotfile .profile
+
+mkdir .cargo
 linkDotfile .cargo
 # for arduino-cli
+linkDotfile .arduino-cli-alias
+mkdir bin
 linkDotfile bin
+mkdir completion_zsh
 linkDotfile completion_zsh
 
 mkdir -p $dotfilesDir/.vim/bundle
