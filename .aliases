@@ -5,7 +5,7 @@ alias lg='exa --group-directories-first'
 alias lgo='exa --group-directories-first --oneline'
 alias lgt='exa --group-directories-first --tree --long --header'
 alias lls='exa --group-directories-first --header --long'
-alias usb='lls /dev/ttyUSB* || lls /dev/ttyACM*'
+alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
 
 ## apt update
 alias upgrade='sudo apt update && sudo apt upgrade'
@@ -21,10 +21,15 @@ alias cargos='cargo install --list'
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 
 ## find shortcuts using ripgrep
-alias aliases='rg alias ${HOME}/.aliases'
-alias paths='rg export ${HOME}/.aliases'
+alias aliases='rg alias ~/.aliases'
+alias paths='rg export ~/.aliases'
+
+## Custom paths
+alias arduino-cli='~/bin/arduino-cli'
 
 # Custom paths/exports
+
+## sources
 source "$HOME/.cargo/env"
 
 ## RPi Pico SDK Development variables
