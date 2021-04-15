@@ -8,7 +8,7 @@ alias lls='exa --group-directories-first --header --long'
 alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
 
 ## apt update
-alias upgrade='sudo apt update && sudo apt upgrade'
+alias upgrade='sudo apt upgrade -y'
 alias update='sudo apt update'
 alias in='sudo apt install'
 alias ulist='sudo apt list --upgradable'
