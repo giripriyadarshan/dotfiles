@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update Ubuntu and get standard repository programs
-# sudo apt update && sudo apt full-upgrade -y
+sudo apt update && sudo apt full-upgrade -y
 
 source menu.sh
 
