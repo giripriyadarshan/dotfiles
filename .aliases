@@ -1,9 +1,9 @@
 # Custom aliases
 
 ## Directories listing
-alias lg='exa --group-directories-first'
-alias lgo='exa --group-directories-first --oneline'
-alias lgt='exa --group-directories-first --tree --long --header'
+alias ls='exa --group-directories-first'
+alias lso='exa --group-directories-first --oneline'
+alias lst='exa --group-directories-first --tree --long --header'
 alias lls='exa --group-directories-first --header --long'
 alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
 
@@ -21,8 +21,11 @@ alias cargos='cargo install --list'
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 
 ## find shortcuts using ripgrep
-alias aliases='rg alias ~/.aliases && rg alias ~/.arduino-cli-alias'
+alias aliases='rg alias ~/.aliases'
 alias paths='rg export ~/.aliases'
+
+## arduino-cli
+alias arduino-cli='~/bin/arduino-cli'
 
 # Custom paths/exports
 
@@ -31,8 +34,6 @@ alias paths='rg export ~/.aliases'
 ### Rust Cargo
 source "$HOME/.cargo/env"
 
-### Arduino-cli aliases
-source ~/.arduino-cli-alias
 
 ## RPi Pico SDK Development variables
 export PICO_SDK_PATH=~/pico-setup/pico/pico-sdk

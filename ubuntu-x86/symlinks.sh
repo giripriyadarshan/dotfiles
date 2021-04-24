@@ -50,8 +50,6 @@ linkDotfile .profile
 
 mkdir .cargo
 linkDotfile .cargo
-# for arduino-cli
-linkDotfile .arduino-cli-alias
 mkdir bin
 linkDotfile bin
 mkdir completion_zsh
