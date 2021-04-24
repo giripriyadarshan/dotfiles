@@ -7,7 +7,7 @@ source menu.sh
 
 clear
 
-case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "CANCEL") in
+case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "* Fedora-x86" "CANCEL") in
 0)
     # install apt packages for Ubuntu x86 Installation only --------------------- Ubuntu x86
     for f in ubuntu-x86/*.txt; do sudo apt install -y $(grep -v '^#' $f); done
@@ -32,9 +32,9 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
     for f in ubuntu-arm-desktop/*.txt; do sudo apt install -y $(grep -v '^#' $f); done
     for f in ubuntu-arm-desktop/*.sh; do bash "$f" -H; done
     ;;
-4)
-    clear
-    printf "\n\n\n\nBye........ See you next time?\n"
-    ;;
+
+    # make an option for fedora installations
 
 esac
+
+clear

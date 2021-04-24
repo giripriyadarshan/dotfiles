@@ -2,6 +2,7 @@
 
 ## Directories listing
 alias ls='exa --group-directories-first'
+alias lg="ls"
 alias lso='exa --group-directories-first --oneline'
 alias lst='exa --group-directories-first --tree --long --header'
 alias lls='exa --group-directories-first --header --long'
