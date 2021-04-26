@@ -105,3 +105,4 @@ fi
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+source "$HOME/.cargo/env"

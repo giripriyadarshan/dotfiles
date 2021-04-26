@@ -50,7 +50,6 @@ wget
 zsh
 
 # command-line utilities
-gh
 minicom
 tldr
 
@@ -58,10 +57,5 @@ tldr
 gimp
 gnome-tweaks
 neofetch
-rpi-imager
 thunderbird
-tixati
 vlc
-
-# pcb design
---install-recommends kicad
