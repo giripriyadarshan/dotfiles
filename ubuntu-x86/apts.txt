@@ -45,6 +45,7 @@ rsync
 texinfo
 vim
 wget
+dconf-cli
 
 # shell
 zsh

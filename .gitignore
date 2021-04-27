@@ -3,3 +3,4 @@ todo.txt
 !.cargo/config
 bin/*
 completion_zsh/*
+themes/*

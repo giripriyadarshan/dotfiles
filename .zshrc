@@ -116,5 +116,9 @@ source $ZSH/oh-my-zsh.sh
 # cargo install starship
 eval "$(starship init zsh)"
 
+# dircolors dracula gnome terminal theme
+# goto ~/dotfiles/themes/gnome-terminal and run install.sh to install theme
+eval `dircolors ~/.dir_colors/dircolors`
+
 # Set path to aliases
 source $HOME/.aliases

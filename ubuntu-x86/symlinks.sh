@@ -59,3 +59,7 @@ mkdir -p $dotfilesDir/.vim/bundle
 cd $dotfilesDir/.vim/bundle
 git clone git://github.com/VundleVim/Vundle.vim.git
 vim +PluginInstall +qall
+
+mkdir -p $dotfilesDir/themes
+cd $dotfilesDir/themes
+git clone https://github.com/dracula/gnome-terminal
