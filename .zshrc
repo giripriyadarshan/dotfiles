@@ -81,6 +81,8 @@ plugins=(
   cargo
   history
   alias-finder
+  themes
+  ripgrep
 )
 
 source $ZSH/oh-my-zsh.sh

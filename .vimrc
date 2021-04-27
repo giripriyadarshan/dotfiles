@@ -12,7 +12,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -40,7 +40,7 @@ Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-" colorscheme dracula
+colorscheme dracula
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
