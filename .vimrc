@@ -40,6 +40,7 @@ Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax enable
 colorscheme dracula
 " To ignore plugin indent changes, instead use:
 "filetype plugin on

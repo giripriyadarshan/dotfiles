@@ -81,7 +81,6 @@ plugins=(
   cargo
   history
   alias-finder
-  themes
   ripgrep
 )
 

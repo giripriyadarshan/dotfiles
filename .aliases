@@ -1,12 +1,21 @@
 # Custom aliases
 
 ## Directories listing
-alias ls='exa --group-directories-first'
-alias lg="ls"
-alias lso='exa --group-directories-first --oneline'
-alias lst='exa --group-directories-first --tree --long --header'
-alias lls='exa --group-directories-first --header --long'
-alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
+if type exa > /dev/null 2>&1
+  then
+  	alias ls='exa --group-directories-first'
+  	alias lg="ls"
+  	alias lso='exa --group-directories-first --oneline'
+  	alias lst='exa --group-directories-first --tree --long --header'
+  	alias lls='exa --group-directories-first --header --long'
+fi
+
+if type fd > /dev/null 2>&1
+  then
+	  alias usb='fd ttyUSB /dev/ -X ls -lh && echo && fd ACM /dev/ -X ls -lh'
+  else
+	  alias usb='find ttyUSB /dev/ -exec ls --long --header ;  echo ; find ACM /dev/ -exec ls --long --header ;'
+fi
 
 ## apt update
 alias upgrade='sudo apt upgrade -y'
@@ -22,8 +31,14 @@ alias cargos='cargo install --list'
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 
 ## find shortcuts using ripgrep
-alias aliases='rg alias ~/.aliases'
-alias paths='rg export ~/.aliases'
+if type rg > /dev/null 2>&1
+  then
+	  alias aliases='rg alias ~/.aliases'
+	  alias paths='rg export ~/.aliases'
+  else
+	  alias aliases='grep alias ~/.aliases'
+	  alias paths='grep export ~/.aliases'
+fi
 
 ## arduino-cli
 alias arduino-cli='~/bin/arduino-cli'
