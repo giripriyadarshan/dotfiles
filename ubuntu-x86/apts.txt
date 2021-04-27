@@ -60,3 +60,5 @@ gnome-tweaks
 neofetch
 thunderbird
 vlc
+
+# Set theme for ubuntu as ant dracula, search on google
