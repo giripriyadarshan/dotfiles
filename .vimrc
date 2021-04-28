@@ -1,7 +1,14 @@
 let g:rustfmt_autosave = 1
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
+if has('filetype')
+  filetype indent plugin on
+endif
+
+" Enable syntax highlighting
+if has('syntax')
+  syntax on
+endif
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -40,7 +47,6 @@ Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-syntax enable
 colorscheme dracula
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -53,3 +59,54 @@ colorscheme dracula
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+if has('termguicolors')
+  set termguicolors
+endif
+
+set hidden
+set wildmenu
+set showcmd
+set confirm
+
+" Enable use of the mouse for all modes
+if has('mouse')
+  set mouse=a
+  set mousehide
+endif
+
+" Display line numbers on the left
+set number
+
+set laststatus=2
+set showmode
+
+set ignorecase
+set smartcase
+set ruler
+
+"""" Tab settings
+
+set tabstop=4           " width that a <TAB> character displays as
+set expandtab           " convert <TAB> key-presses to spaces
+set shiftwidth=4        " number of spaces to use for each step of (auto)indent
+set softtabstop=4       " backspace after pressing <TAB> will remove up to this many spaces
+
+set autoindent          " copy indent from current line when starting a new line
+set smartindent         " even better autoindent (e.g. add indent after '{')
+
+" Search
+set incsearch
+set hlsearch
+
+set cursorline
+set showmatch
+set wrap
+set linebreak
+set encoding=utf-8
+set title
+set history=2000
+set noerrorbells 
+
+" http://albertwu.org/cs61a/notes/vimrc.html
+set statusline=%.40F%=%m\ %Y\ Line:\ %3l/%L[%3p%%]
+
