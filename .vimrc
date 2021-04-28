@@ -41,6 +41,8 @@ Plugin 'rust-lang/rust.vim'
 
 Plugin 'vim-syntastic/syntastic'
 
+Plugin 'vim-airline/vim-airline'
+
 
 " All of your Plugins must be added before the following line
 
@@ -77,7 +79,6 @@ endif
 " Display line numbers on the left
 set number
 
-set laststatus=2
 set showmode
 
 set ignorecase
@@ -103,10 +104,6 @@ set showmatch
 set wrap
 set linebreak
 set encoding=utf-8
-set title
 set history=2000
 set noerrorbells 
-
-" http://albertwu.org/cs61a/notes/vimrc.html
-set statusline=%.40F%=%m\ %Y\ Line:\ %3l/%L[%3p%%]
 
