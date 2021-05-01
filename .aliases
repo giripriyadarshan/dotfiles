@@ -13,7 +13,12 @@ fi
 
 if type fd > /dev/null 2>&1
 then
-  alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
+  if type exa > /dev/null 2>&1
+  then
+	alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
+  else
+	alias usb='fd ttyUSB /dev/ -X ls -lh && echo && fd ACM /dev/ -X ls -lh'
+  fi
 else
   alias usb='find ttyUSB /dev/ -exec ls --long --header ;  echo ; find ACM /dev/ -exec ls --long --header ;'
 fi
