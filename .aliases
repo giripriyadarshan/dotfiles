@@ -8,7 +8,7 @@ then
   alias lg="ls"
   alias lso='exa --group-directories-first --oneline'
   alias lst='exa --group-directories-first --tree --long --header'
-  alias lls='exa --group-directories-first --header --long'
+  alias lls='exa --group-directories-first --header --long --git --icons -F'
 fi
 
 if type fd > /dev/null 2>&1
