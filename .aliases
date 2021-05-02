@@ -2,8 +2,7 @@
 # Custom aliases
 
 ## Directories listing
-if type exa > /dev/null 2>&1
-then
+if type exa > /dev/null 2>&1 ; then
   alias ls='exa --group-directories-first'
   alias lg="ls"
   alias lso='exa --group-directories-first --oneline'
@@ -11,10 +10,8 @@ then
   alias lls='exa --group-directories-first --header --long --git --icons -F'
 fi
 
-if type fd > /dev/null 2>&1
-then
-  if type exa > /dev/null 2>&1
-  then
+if type fd > /dev/null 2>&1 ; then
+  if type exa > /dev/null 2>&1 ; then
 	alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
   else
 	alias usb='fd ttyUSB /dev/ -X ls -lh && echo && fd ACM /dev/ -X ls -lh'
@@ -37,8 +34,7 @@ alias cargos='cargo install --list'
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 
 ## find shortcuts using ripgrep
-if type rg > /dev/null 2>&1
-then
+if type rg > /dev/null 2>&1 ; then
   alias aliases='rg alias ~/.aliases'
   alias paths='rg export ~/.aliases'
 else
