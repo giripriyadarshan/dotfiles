@@ -2,12 +2,12 @@ let g:rustfmt_autosave = 1
 
 set nocompatible              " be iMproved, required
 if has('filetype')
-  filetype indent plugin on
+	filetype indent plugin on
 endif
 
 " Enable syntax highlighting
 if has('syntax')
-  syntax on
+	syntax on
 endif
 
 " set the runtime path to include Vundle and initialize
@@ -64,7 +64,7 @@ colorscheme dracula
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 if has('termguicolors')
-  set termguicolors
+	set termguicolors
 endif
 
 set hidden
@@ -74,8 +74,8 @@ set confirm
 
 " Enable use of the mouse for all modes
 if has('mouse')
-  set mouse=a
-  set mousehide
+	set mouse=a
+	set mousehide
 endif
 
 " Display line numbers on the left
@@ -91,7 +91,7 @@ set ruler
 
 set tabstop=4           " width that a <TAB> character displays as
 " set expandtab           " convert <TAB> key-presses to spaces
-set shiftwidth=2        " number of spaces to use for each step of (auto)indent
+set shiftwidth=4        " number of spaces to use for each step of (auto)indent
 set softtabstop=4       " backspace after pressing <TAB> will remove up to this many spaces
 
 set autoindent          " copy indent from current line when starting a new line
