@@ -3,21 +3,26 @@
 
 ## Directories listing
 if type exa > /dev/null 2>&1 ; then
-  alias ls='exa --group-directories-first'
-  alias lg="ls"
-  alias lso='exa --group-directories-first --oneline'
-  alias lst='exa --group-directories-first --tree --long --header'
-  alias lls='exa --group-directories-first --header --long --git --icons -F'
+	alias ls='exa --group-directories-first'
+	alias lg="ls"
+	alias lso='exa --group-directories-first --oneline'
+	alias lst='exa --group-directories-first --tree --long --header'
+	alias lls='exa --group-directories-first --header --long --git --icons -F'
 fi
 
 if type fd > /dev/null 2>&1 ; then
-  if type exa > /dev/null 2>&1 ; then
-	alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
-  else
-	alias usb='fd ttyUSB /dev/ -X ls -lh && echo && fd ACM /dev/ -X ls -lh'
-  fi
+	if type exa > /dev/null 2>&1 ; then
+		alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
+	else
+		alias usb='fd ttyUSB /dev/ -X ls -lh && echo && fd ACM /dev/ -X ls -lh'
+	fi
 else
-  alias usb='find ttyUSB /dev/ -exec ls --long --header ;  echo ; find ACM /dev/ -exec ls --long --header ;'
+	alias usb='find /dev/ -name "ttyUSB*" -exec ls {} \; && find /dev/ -name "ttyACM*" -exec ls {} \;'
+fi
+
+
+if type bat > /dev/null 2>&1 ; then
+	alias cat="bat"
 fi
 
 ## apt update
@@ -35,15 +40,18 @@ alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 
 ## find shortcuts using ripgrep
 if type rg > /dev/null 2>&1 ; then
-  alias aliases='rg alias ~/.aliases'
-  alias paths='rg export ~/.aliases'
+	alias aliases='rg alias ~/.aliases'
+	alias paths='rg export ~/.aliases'
 else
-  alias aliases='grep alias ~/.aliases'
-  alias paths='grep export ~/.aliases'
+	alias aliases='grep alias ~/.aliases'
+	alias paths='grep export ~/.aliases'
 fi
 
 ## arduino-cli
 alias arduino-cli='~/bin/arduino-cli'
+
+## exit
+alias :q='exit'
 
 # Custom paths/exports
 
