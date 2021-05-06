@@ -99,7 +99,7 @@ function gq {
 }
 
 # make a directory and cd into it
-mkcd() {
+function mkcd() {
 	mkdir -p "$1"
 	cd "$1" || false
 }
