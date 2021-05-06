@@ -1,7 +1,7 @@
 todo.txt
 .cargo/*
 !.cargo/config
-bin/*
+bin/arduino-cli
 completion_zsh/*
 themes/*
 .vim/bundle/*

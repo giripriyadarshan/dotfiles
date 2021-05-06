@@ -82,9 +82,6 @@ alias arduino-cli='~/bin/arduino-cli'
 alias :q='exit'
 
 
-alias untar='tar -zxvf'
-
-
 # Quick add, commit and push on origin branch with Git
 function gq {
    git add .
@@ -103,6 +100,9 @@ function mkcd() {
 	mkdir -p "$1"
 	cd "$1" || false
 }
+
+# wifi keys
+alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 
 
 # Custom paths/exports
