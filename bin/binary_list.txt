@@ -1,2 +1,0 @@
-binary_list.txt
-arduino-cli

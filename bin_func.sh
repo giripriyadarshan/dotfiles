@@ -1,16 +1,13 @@
 #!/bin/bash
 
-input="./bin/binary_list.txt"
-while IFS= read -r line
-do
-	for f in bin/* ; do
-		if [ "$f" != "$line" ] ; then 
-			if [ -x "$f" ] 
-			then
-				echo 
-			else
-				chmod +x "$f"
-			fi
-		fi	
-	done
-done < "$input"
+for f in bin/* ; do
+	if [ $f != $line ] ; then 
+		if [ -x "$f" ] 
+		then
+			echo "$f is already run ----"
+		else
+			echo "$f is made to run now"
+			chmod +x "$f"
+		fi
+	fi	
+done
