@@ -1,4 +1,6 @@
 #!/bin/bash
+
+
 # Custom aliases
 
 ## Directories listing
@@ -26,10 +28,18 @@ if type bat > /dev/null 2>&1 ; then
 fi
 
 ## apt update
-alias upgrade='sudo apt upgrade -y'
-alias update='sudo apt update'
-alias in='sudo apt install'
 alias ulist='sudo apt list --upgradable'
+alias update='sudo apt update && ulist'
+
+function upgrade() {
+	if [ "$1" = list ] ; then
+		ulist
+	else
+		sudo apt upgrade -y
+	fi
+}
+
+alias in='sudo apt install'
 
 ## init shells
 alias run='chmod +x'
@@ -40,7 +50,7 @@ alias run='chmod +x'
 # 	alias cargos-update='cargo install-update -a'
 # fi
  
-cargos() {
+function cargos() {
   if [ "$1" = update ]; then
 	  cargo install-update -a
   else
