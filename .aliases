@@ -27,6 +27,9 @@ if type bat > /dev/null 2>&1 ; then
 	alias cat="bat"
 fi
 
+
+
+
 ## apt update
 alias ulist='sudo apt list --upgradable'
 alias update='sudo apt update && ulist'
@@ -41,24 +44,27 @@ function upgrade() {
 
 alias in='sudo apt install'
 
+
+
+
 ## init shells
 alias run='chmod +x'
 
-## custom build envs
-# alias cargos='cargo install --list'
-# if type cargo-install-update > /dev/null 2>&1 ; then
-# 	alias cargos-update='cargo install-update -a'
-# fi
- 
+
+
+## cargo list
+
 function cargos() {
-  if [ "$1" = update ]; then
-	  cargo install-update -a
-  else
-	  cargo install --list
-  fi
+	if [ "$1" = update ]; then
+		cargo install-update -a
+	else
+		cargo install --list
+	fi
 }
 
+## misc
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
+alias sudo='sudo '
 
 ## find shortcuts using ripgrep
 if type rg > /dev/null 2>&1 ; then
@@ -74,6 +80,29 @@ alias arduino-cli='~/bin/arduino-cli'
 
 ## exit
 alias :q='exit'
+
+
+alias untar='tar -zxvf'
+
+
+# Quick add, commit and push on origin branch with Git
+function gq {
+   git add .
+   message=""
+   for arg in "$@"
+   do
+      message+="$arg"
+      message+=" "
+   done
+   git commit -m "$message"
+   git push
+}
+
+# make a directory and cd into it
+mkcd() {
+	mkdir -p "$1"
+	cd "$1" || false
+}
 
 # Custom paths/exports
 
