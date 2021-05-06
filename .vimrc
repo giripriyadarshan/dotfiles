@@ -110,3 +110,4 @@ set history=2000
 set noerrorbells 
 
 nnoremap <SPACE> zz
+

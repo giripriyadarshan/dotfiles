@@ -35,7 +35,19 @@ alias ulist='sudo apt list --upgradable'
 alias run='chmod +x'
 
 ## custom build envs
-alias cargos='cargo install --list'
+# alias cargos='cargo install --list'
+# if type cargo-install-update > /dev/null 2>&1 ; then
+# 	alias cargos-update='cargo install-update -a'
+# fi
+ 
+cargos() {
+  if [ "$1" = update ]; then
+	  cargo install-update -a
+  else
+	  cargo install --list
+  fi
+}
+
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 
 ## find shortcuts using ripgrep
