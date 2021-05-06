@@ -51,17 +51,6 @@ alias in='sudo apt install'
 alias run='chmod +x'
 
 
-
-## cargo list
-
-function cargos() {
-	if [ "$1" = update ]; then
-		cargo install-update -a
-	else
-		cargo install --list
-	fi
-}
-
 ## misc
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 alias sudo='sudo '
@@ -81,19 +70,6 @@ alias arduino-cli='~/bin/arduino-cli'
 ## exit
 alias :q='exit'
 
-
-# Quick add, commit and push on origin branch with Git
-function gq {
-   git add .
-   message=""
-   for arg in "$@"
-   do
-      message+="$arg"
-      message+=" "
-   done
-   git commit -m "$message"
-   git push
-}
 
 # make a directory and cd into it
 function mkcd() {
