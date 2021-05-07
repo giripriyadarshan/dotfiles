@@ -41,3 +41,5 @@ vim +PluginInstall +qall
 mkdir -p $dotfilesDir/themes
 cd $dotfilesDir/themes
 git clone https://github.com/dracula/gnome-terminal
+
+mkdir -p $dotfilesDir/.vim/swap

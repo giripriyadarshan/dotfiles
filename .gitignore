@@ -5,3 +5,4 @@ bin/arduino-cli
 completion_zsh/*
 themes/*
 .vim/bundle/*
+.vim/swap/*

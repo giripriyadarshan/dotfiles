@@ -111,3 +111,4 @@ set noerrorbells
 
 nnoremap <SPACE> zz
 
+set directory^=$HOME/.vim/swap//
