@@ -16,8 +16,9 @@ function vm() {
 	fi
 }
 
-_vm() {
-	compadd azure-linux home-automation none
-}
+if [ "$(ps -o args= -p "$$")" = "zsh" ] ; then
+	_vm() {
+		compadd azure-linux home-automation none
+	}
 compdef _vm vm
-
+fi

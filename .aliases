@@ -42,10 +42,12 @@ function upgrade() {
 	fi
 }
 
-_upgrade() {
-	compadd list
-}
+if [ "$(ps -o args= -p "$$")" = "zsh" ] ; then
+	_upgrade() {
+		compadd list
+	}
 compdef _upgrade upgrade
+fi
 
 alias in='sudo apt install'
 
