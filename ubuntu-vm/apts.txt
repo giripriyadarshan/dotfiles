@@ -1,0 +1,13 @@
+# dev tools
+apt-transport-https
+autoconf
+automake
+build-essential
+cmake
+curl
+g++
+gcc
+git
+vim
+wget
+

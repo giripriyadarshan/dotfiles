@@ -80,6 +80,15 @@ function mkcd() {
 # wifi keys
 alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 
+## Virtual Machines SSH
+function vm() {
+	if [ "$1" = azure-linux ]; then
+		ssh giripriyadarshan@52.163.80.54
+	else
+		echo "Enter a valid ssh address"
+	fi
+}
+
 
 # Custom paths/exports
 
