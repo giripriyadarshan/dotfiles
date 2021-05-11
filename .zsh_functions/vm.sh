@@ -16,7 +16,7 @@ function vm() {
 	fi
 }
 
-if [ "$(ps -o args= -p "$$")" = "zsh" ] ; then
+if [ "$(ps -o comm= -p "$$")" = "zsh" ] ; then
 	_vm() {
 		compadd azure-linux home-automation none
 	}

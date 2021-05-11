@@ -8,7 +8,7 @@ function cargos {
 	fi
 }
 
-if [ "$(ps -o args= -p "$$")" = "zsh" ] ; then
+if [ "$(ps -o comm= -p "$$")" = "zsh" ] ; then
 	_cargos(){
 		compadd update list
 	}
