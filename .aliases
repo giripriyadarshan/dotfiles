@@ -42,6 +42,11 @@ function upgrade() {
 	fi
 }
 
+_upgrade() {
+	compadd list
+}
+compdef _upgrade upgrade
+
 alias in='sudo apt install'
 
 
@@ -89,6 +94,14 @@ function vm() {
 	fi
 }
 
+_vm() {
+	compadd azure-linux none
+}
+compdef _vm vm
+
+# shellcheck disable=SC1090
+# load zsh functions
+for f in ~/.zsh_functions/* ; do source "$f" ; done
 
 # Custom paths/exports
 

@@ -43,3 +43,5 @@ cd $dotfilesDir/themes
 git clone https://github.com/dracula/gnome-terminal
 
 mkdir -p $dotfilesDir/.vim/swap
+
+linkDotfile .zsh_functions

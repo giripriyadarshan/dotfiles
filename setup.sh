@@ -15,7 +15,6 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
     # so added it in the last so it won't pause other scripts
     bash rust.sh
     bash arduino-cli.sh
-    bash bin_func.sh
     ;;
 1)
     # install apt packages for Raspberry Pi Headless Installation only --------------------- RPi Headless
@@ -41,8 +40,6 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
     sudo apt update && sudo apt full-upgrade -y
     for f in ubuntu-vm/*.txt; do sudo apt install -y "$(grep -v '^#' "$f")"; done
     for f in ubuntu-vm/*.sh; do bash "$f" -H; done
-
-    bash bin_func.sh
     ;;
 
 esac
