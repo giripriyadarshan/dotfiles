@@ -85,20 +85,6 @@ function mkcd() {
 # wifi keys
 alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 
-## Virtual Machines SSH
-function vm() {
-	if [ "$1" = azure-linux ]; then
-		ssh giripriyadarshan@52.163.80.54
-	else
-		echo "Enter a valid ssh address"
-	fi
-}
-
-_vm() {
-	compadd azure-linux none
-}
-compdef _vm vm
-
 # shellcheck disable=SC1090
 # load zsh functions
 for f in ~/.zsh_functions/* ; do source "$f" ; done
@@ -110,3 +96,4 @@ export PICO_SDK_PATH=~/pico-setup/pico/pico-sdk
 export PICO_EXAMPLES_PATH=~/pico-setup/pico/pico-examples
 export PICO_EXTRAS_PATH=~/pico-setup/pico/pico-extras
 export PICO_PLAYGROUND_PATH=~/pico-setup/pico/pico-playground
+
