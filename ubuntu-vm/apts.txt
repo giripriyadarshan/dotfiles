@@ -1,5 +1,4 @@
 # dev tools
-apt-transport-https
 autoconf
 automake
 build-essential
