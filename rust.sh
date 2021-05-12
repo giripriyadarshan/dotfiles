@@ -15,3 +15,4 @@ cargo install diesel_cli
 cargo install fd-find
 cargo install ripgrep
 cargo install procs
+cargo install cargo-update
