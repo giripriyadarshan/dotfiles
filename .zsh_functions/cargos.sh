@@ -8,10 +8,10 @@ function cargos {
 	fi
 }
 
-if [ "$(ps -o comm= -p "$$")" = "zsh" ] ; then
-	_cargos(){
+if [ "$(ps -o comm= -p "$$")" = "zsh" ]; then
+	_cargos() {
 		compadd update list
 	}
 
-compdef _cargos cargos
+	compdef _cargos cargos
 fi

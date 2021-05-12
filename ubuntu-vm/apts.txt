@@ -1,6 +1,4 @@
 # dev tools
-autoconf
-automake
 build-essential
 cmake
 curl
