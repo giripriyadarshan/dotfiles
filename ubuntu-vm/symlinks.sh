@@ -34,3 +34,5 @@ git clone git://github.com/VundleVim/Vundle.vim.git
 vim +PluginInstall +qall
 
 mkdir -p $dotfilesDir/.vim/swap
+
+linkDotfile .zsh_functions
