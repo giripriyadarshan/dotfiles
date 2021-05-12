@@ -68,6 +68,7 @@ alias arduino-cli='~/bin/arduino-cli'
 
 ## exit
 alias :q='exit'
+alias :w='exec "$(ps -o comm= -p "$$")"'
 
 # make a directory and cd into it
 function mkcd() {
