@@ -83,6 +83,20 @@ alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 # load zsh functions
 for f in ~/.zsh_functions/*; do source "$f"; done
 
+# read TODOs and Reminders
+if [ -f ~/Desktop/Reminders.txt ]; then
+	cat ~/Desktop/Reminders.txt
+	if type vim >/dev/null 2>&1; then
+		alias reminders='vim ~/Desktop/Reminders.txt'
+	elif type vi >/dev/null 2>&1; then
+		alias reminders='vi ~/Desktop/Reminders.txt'
+	elif type nano >/dev/null 2>&1; then
+		alias reminders='nano ~/Desktop/Reminders.txt'
+	else
+		echo "Please install vi, vim, or nano to edit reminders using \"reminders\" alias "
+	fi
+fi
+
 # Custom paths/exports
 
 ## RPi Pico SDK Development variables
@@ -90,3 +104,4 @@ export PICO_SDK_PATH=~/pico-setup/pico/pico-sdk
 export PICO_EXAMPLES_PATH=~/pico-setup/pico/pico-examples
 export PICO_EXTRAS_PATH=~/pico-setup/pico/pico-extras
 export PICO_PLAYGROUND_PATH=~/pico-setup/pico/pico-playground
+
