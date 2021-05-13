@@ -82,6 +82,7 @@ plugins=(
   history
   alias-finder
   ripgrep
+  nvm
 )
 
 source $ZSH/oh-my-zsh.sh
