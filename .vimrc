@@ -110,5 +110,7 @@ set history=2000
 set noerrorbells 
 
 nnoremap <SPACE> zz
+nnoremap :W :w
+nnoremap :Q :q
 
 set directory^=$HOME/.vim/swap//
