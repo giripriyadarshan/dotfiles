@@ -107,10 +107,16 @@ set wrap
 set linebreak
 set encoding=utf-8
 set history=2000
-set noerrorbells 
 
+set noerrorbells
+set belloff=all
+
+" key remaps
 nnoremap <SPACE> zz
 nnoremap :W :w
 nnoremap :Q :q
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 
 set directory^=$HOME/.vim/swap//

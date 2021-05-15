@@ -53,6 +53,7 @@ alias run='chmod +x'
 ## misc
 alias idf-path='source "$HOME/esp/esp-idf/export.sh"'
 alias sudo='sudo '
+alias fucking=sudo
 
 ## find shortcuts using ripgrep
 if type rg >/dev/null 2>&1; then
@@ -98,6 +99,8 @@ if [ -f ~/Desktop/Reminders.txt ]; then
 fi
 
 # Custom paths/exports
+[ -f /usr/bin/vim ] && alias vi='vim'
+export EDITOR=vim
 
 ## RPi Pico SDK Development variables
 export PICO_SDK_PATH=~/pico-setup/pico/pico-sdk

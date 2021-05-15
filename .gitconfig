@@ -4,3 +4,9 @@
 	username = giripriyadarshan
 [credential]
 	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+
+[core]
+	editor = vim
+
+[grep]
+	lineNumber = true
