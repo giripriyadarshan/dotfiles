@@ -67,7 +67,7 @@ fi
 ## arduino-cli
 alias arduino-cli='~/bin/arduino-cli'
 
-## exit
+## vim like misc
 alias :q='exit'
 alias :w='exec "$(ps -o comm= -p "$$")"'
 
