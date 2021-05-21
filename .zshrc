@@ -123,3 +123,6 @@ eval `dircolors ~/.dir_colors/dircolors`
 
 # Set path to aliases
 source $HOME/.aliases
+
+autoload -U compinit
+compinit
