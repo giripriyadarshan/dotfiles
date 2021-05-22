@@ -57,11 +57,11 @@ alias fucking=sudo
 
 ## find shortcuts using ripgrep
 if type rg >/dev/null 2>&1; then
-	alias aliases='rg alias ~/.aliases'
-	alias paths='rg export ~/.aliases'
+	alias aliases='rg "alias\s.*=" ~/.aliases ~/.bashrc ~/.zshrc'
+	alias paths='rg "export\s" ~/.aliases ~/.bashrc ~/.zshrc && rg "source\s" ~/.aliases ~/.bashrc ~/.zshrc'
 else
-	alias aliases='grep alias ~/.aliases'
-	alias paths='grep export ~/.aliases'
+	alias aliases='grep "alias\s.*=" ~/.aliases ~/.bashrc ~/.zshrc'
+	alias paths='grep "export\s" ~/.aliases && grep "source\s" ~/.aliases ~/.bashrc ~/.zshrc'
 fi
 
 ## arduino-cli
@@ -70,6 +70,7 @@ alias arduino-cli='~/bin/arduino-cli'
 ## vim like misc
 alias :q='exit'
 alias :w='exec "$(ps -o comm= -p "$$")"'
+export KEYTIMEOUT=1
 
 # make a directory and cd into it
 function mkcd() {
