@@ -6,3 +6,4 @@ completion_zsh/*
 themes/*
 .vim/bundle/*
 .vim/swap/*
+.vim/pack/*
