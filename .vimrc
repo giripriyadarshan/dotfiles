@@ -46,6 +46,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
 
 
+Plugin 'frazrepo/vim-rainbow'
+
+
 " All of your Plugins must be added before the following line
 
 
@@ -110,6 +113,8 @@ set history=2000
 
 set noerrorbells
 set belloff=all
+
+let g:rainbow_active = 1
 
 " key remaps
 nnoremap <SPACE> zz
