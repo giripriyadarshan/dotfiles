@@ -16,3 +16,4 @@ cargo install fd-find
 cargo install ripgrep
 cargo install procs
 cargo install cargo-update
+cargo install cargo-watch

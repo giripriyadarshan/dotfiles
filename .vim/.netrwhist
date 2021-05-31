@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/giripriyadarshan/CLionProjects/learn_webapp/migrations/00000000000000_diesel_initial_setup'
 let g:netrw_dirhist_7='/home/giripriyadarshan/dotfiles/ubuntu-vm'
 let g:netrw_dirhist_6='/home/giripriyadarshan/dotfiles'
 let g:netrw_dirhist_5='/home/giripriyadarshan/dotfiles/ubuntu-vm'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_2='/home/giripriyadarshan/dotfiles'
 let g:netrw_dirhist_1='/home/giripriyadarshan/git-clones/custom_libraries'
 let g:netrw_dirhist_0='/home/giripriyadarshan/Desktop/desktop2/html_practice'
 let g:netrw_dirhist_9='/home/giripriyadarshan/Projects/project-home-automation'
-let g:netrw_dirhist_8='/home/giripriyadarshan/Projects/project-home-automation/esp01_relay'
