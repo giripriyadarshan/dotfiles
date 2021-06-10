@@ -83,7 +83,6 @@ plugins=(
   alias-finder
   ripgrep
   nvm
-  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -93,7 +93,7 @@ set ruler
 """" Tab settings
 
 set tabstop=4           " width that a <TAB> character displays as
-" set expandtab           " convert <TAB> key-presses to spaces
+set expandtab           " convert <TAB> key-presses to spaces
 set shiftwidth=4        " number of spaces to use for each step of (auto)indent
 set softtabstop=4       " backspace after pressing <TAB> will remove up to this many spaces
 
