@@ -2,8 +2,6 @@
 	name = giripriyadarshan
 	email = 43517605+giripriyadarshan@users.noreply.github.com
 	username = giripriyadarshan
-[credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 
 [core]
 	editor = vim
