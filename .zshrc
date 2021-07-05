@@ -124,6 +124,8 @@ eval "$(starship init zsh)"
 
 # Set path to aliases
 source $HOME/.aliases
+source $HOME/.cargo/env
+
 
 autoload -U compinit
 compinit
