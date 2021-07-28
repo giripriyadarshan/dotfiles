@@ -5,7 +5,7 @@ source menu.sh
 
 clear
 
-case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "* Ubuntu Cloud VM" "CANCEL") in
+case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "* Ubuntu Cloud VM" "WSL-Ubuntu" "CANCEL") in
     0)
         # install apt packages for Ubuntu x86 Installation only --------------------- Ubuntu x86
         sudo apt update && sudo apt full-upgrade -y
@@ -75,6 +75,21 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
         done
 
         for f in ubuntu-vm/*.sh; do bash "$f" -H; done
+        ;;
+
+    5)
+        # install apt packages for WSL-Ubuntu Windows installation only ----------------------- WSL-Ubuntu
+        sudo apt update && sudo apt full-upgrade -y
+        for f in wsl-ubuntu/*.txt
+        do
+            while IFS= read -r app
+            do
+                sudo apt install -y "$app"
+            done < <(grep -v '^#' "$f")
+        done
+
+        for f in wsl-ubuntu/*.sh; do bash "$f" -H; done
+        bash rust.sh
         ;;
 
     esac

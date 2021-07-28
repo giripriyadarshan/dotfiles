@@ -1,0 +1,20 @@
+# dev tools
+build-essential
+cmake
+curl
+g++
+gcc
+git
+vim
+wget
+
+# terminal
+zsh
+
+# libs for rust
+libssl-dev
+libpq-dev
+pkg-config
+libmysqlclient-dev
+libsqlite3-dev
+
