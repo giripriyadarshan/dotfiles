@@ -8,3 +8,13 @@
 
 [grep]
 	lineNumber = true
+
+[sendemail]
+    confirm = auto
+    smtpserver = smtp.gmail.com
+    smtpserverPort = 587
+    smtpencryption = tls
+    smtpuser = giripriyadarshan
+
+[include]
+    path = ~/.secrets/.gitconfig.local
