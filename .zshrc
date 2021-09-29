@@ -128,4 +128,4 @@ source $HOME/.cargo/env
 
 
 autoload -U compinit
-compinit
+compinit -i
