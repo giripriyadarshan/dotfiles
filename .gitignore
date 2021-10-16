@@ -7,3 +7,4 @@ themes/*
 .vim/bundle/*
 .vim/swap/*
 .vim/pack/*
+status/
