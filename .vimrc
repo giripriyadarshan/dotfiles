@@ -1,5 +1,3 @@
-let g:rustfmt_autosave = 1
-
 set nocompatible              " be iMproved, required
 if has('filetype')
 	filetype indent plugin on
@@ -37,7 +35,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
-Plugin 'rust-lang/rust.vim'
 
 Plugin 'vim-syntastic/syntastic'
 
