@@ -81,6 +81,9 @@ function mkcd() {
 # wifi keys
 alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 
+# misc
+alias ping="ping -c 5"
+
 # shellcheck disable=SC1090
 # load zsh functions
 for f in ~/.zsh_functions/*; do source "$f"; done
