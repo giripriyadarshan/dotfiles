@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## Virtual Machines SSH
 function vm() {
@@ -16,7 +16,6 @@ function vm() {
 }
 
 [ "$(ps -o comm= -p "$$")" = "zsh" ] && _vm() {
-compadd azure-linux home-automation none
+	compadd azure-linux home-automation none
 }
 compdef _vm vm
-

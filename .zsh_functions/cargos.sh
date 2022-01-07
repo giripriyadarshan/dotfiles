@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function cargos {
 	if [ "$1" = update ]; then
@@ -9,8 +9,7 @@ function cargos {
 }
 
 [ "$(ps -o comm= -p "$$")" = "zsh" ] && _cargos() {
-compadd update list
+	compadd update list
 }
 
 compdef _cargos cargos
-

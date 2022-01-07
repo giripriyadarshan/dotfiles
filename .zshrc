@@ -125,6 +125,5 @@ eval "$(starship init zsh)"
 source $HOME/.aliases
 source $HOME/.cargo/env
 
-
 autoload -U compinit
 compinit -i

@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
+# shellcheck disable=SC1090
 source ~/dotfiles/symfunc.sh
 
 dotfilesDir=$(pwd)
@@ -28,11 +29,11 @@ linkDotfile .profile
 linkDotfile .cargo
 linkDotfile bin
 
-mkdir -p $dotfilesDir/.vim/bundle
-cd $dotfilesDir/.vim/bundle
+mkdir -p "$dotfilesDir"/.vim/bundle
+cd "$dotfilesDir"/.vim/bundle || exit
 git clone git://github.com/VundleVim/Vundle.vim.git
 vim +PluginInstall +qall
 
-mkdir -p $dotfilesDir/.vim/swap
+mkdir -p "$dotfilesDir"/.vim/swap
 
 linkDotfile .zsh_functions

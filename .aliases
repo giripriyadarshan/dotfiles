@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Custom aliases
 
@@ -44,7 +44,7 @@ if [ "$(ps -o comm= -p "$$")" = "zsh" ]; then
     _upgrade() {
         compadd list now
     }
-compdef _upgrade upgrade
+    compdef _upgrade upgrade
 fi
 
 ## init shells
@@ -89,10 +89,9 @@ alias ping="ping -c 5"
 for f in ~/.zsh_functions/*; do source "$f"; done
 
 # read TODOs and Reminders
-echo -n "Do you want to check for reminders? y/n? : " 
+echo -n "Do you want to check for reminders? y/n? : "
 read -r checkingforapprovalbytheuser
-if [ "$checkingforapprovalbytheuser" = "y" ]
-then
+if [ "$checkingforapprovalbytheuser" = "y" ]; then
 
     if [ -f ~/Desktop/Reminders.txt ]; then
         cat ~/Desktop/Reminders.txt
@@ -119,4 +118,3 @@ export PICO_SDK_PATH=~/pico-setup/pico/pico-sdk
 export PICO_EXAMPLES_PATH=~/pico-setup/pico/pico-examples
 export PICO_EXTRAS_PATH=~/pico-setup/pico/pico-extras
 export PICO_PLAYGROUND_PATH=~/pico-setup/pico/pico-playground
-
