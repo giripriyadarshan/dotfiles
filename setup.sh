@@ -5,7 +5,7 @@ source menu.sh
 
 clear
 
-case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "* Ubuntu Cloud VM" "WSL-Ubuntu" "CANCEL") in
+case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "* Ubuntu Cloud VM" "* WSL-Ubuntu" "* Manjaro Linux" "CANCEL") in
     0)
         # install apt packages for Ubuntu x86 Installation only --------------------- Ubuntu x86
         sudo apt update && sudo apt full-upgrade -y
@@ -90,6 +90,20 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
 
         for f in wsl-ubuntu/*.sh; do bash "$f" -H; done
         bash rust.sh
+        ;;
+
+    6)
+        # install pacman packages for Manjaro Arch Linux installation only ----------------------- Manjaro Linux
+        sudo pacman -Syyu
+        for f in manjaro-x86/*.txt
+        do
+            while IFS= read -r app
+            do
+                sudo pacman -S  --needed --noconfirm "$app"
+            done < <(grep -v '^#' "$f")
+        done
+
+        for f in manjaro-x86/*.sh; do bash "$f" -H; done
         ;;
 
     esac

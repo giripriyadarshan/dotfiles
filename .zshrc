@@ -78,7 +78,6 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     rust
-    cargo
     history
     alias-finder
     ripgrep

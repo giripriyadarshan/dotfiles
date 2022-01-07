@@ -1,0 +1,10 @@
+# utils
+starship
+bat
+shellcheck
+ripgrep
+vim
+
+# applications
+discord
+github-cli
