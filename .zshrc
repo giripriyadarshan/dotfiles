@@ -124,6 +124,7 @@ eval "$(starship init zsh)"
 # Set path to aliases
 source $HOME/.aliases
 source $HOME/.cargo/env
+eval "$(fnm env --use-on-cd)"
 fpath=($HOME/completion_zsh $fpath)
 
 autoload -U compinit
