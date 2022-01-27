@@ -1,10 +1,16 @@
 # utils
 starship
 bat
+diesel-cli
+exa
+fd
 shellcheck
 ripgrep
-vim
+docker
+docker-compose
 
 # applications
 discord
 github-cli
+arduino-cli
+vim
