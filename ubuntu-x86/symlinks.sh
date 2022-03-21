@@ -39,6 +39,10 @@ cd "$dotfilesDir"/.vim/bundle || exit
 git clone git://github.com/VundleVim/Vundle.vim.git
 vim +PluginInstall +qall
 
+mkdir -p "$HOME/.config/nvim"
+linkDotfile ".config/nvim/init.vim"
+nvim +PluginInstall +qall
+
 mkdir -p "$dotfilesDir"/themes
 cd "$dotfilesDir"/themes || exit
 git clone https://github.com/dracula/gnome-terminal
