@@ -44,7 +44,7 @@ if [ "$(ps -o comm= -p "$$")" = "zsh" ]; then
     _upgrade() {
         compadd list now
     }
-    compdef _upgrade upgrade
+compdef _upgrade upgrade
 fi
 
 ## init shells
@@ -111,7 +111,11 @@ if [ "$checkingforapprovalbytheuser" = "y" ]; then
 fi
 
 # Custom paths/exports
-if [ -f /usr/bin/vim ] && alias vi='vim'; then
+
+if [ -f /usr/bin/nvim ]; then
+    export EDITOR='nvim'
+    alias vim='nvim'
+elif [ -f /usr/bin/vim ] && alias vi='vim'; then
     export EDITOR=vim
 fi
 
