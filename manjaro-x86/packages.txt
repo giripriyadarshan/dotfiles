@@ -14,3 +14,4 @@ discord
 github-cli
 arduino-cli
 vim
+neovim

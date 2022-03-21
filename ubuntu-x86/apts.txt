@@ -46,6 +46,7 @@ texinfo
 vim
 wget
 dconf-cli
+neovim
 
 # shell
 zsh
