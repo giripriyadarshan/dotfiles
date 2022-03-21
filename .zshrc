@@ -134,6 +134,6 @@ if [ -d "$HOME/git-clones/flutter" ]; then
     export PATH="$PATH:$HOME/git-clones/flutter/bin"
 fi
 
-if [-f /usr/bin/google-chrome-stable ]; then
+if [ -f "/usr/bin/google-chrome-stable" ]; then
     export CHROME_EXECUTABLE=google-chrome-stable
 fi
