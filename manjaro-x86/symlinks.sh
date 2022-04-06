@@ -36,7 +36,7 @@ linkDotfile completion_zsh
 
 mkdir -p "$dotfilesDir"/.vim/bundle
 cd "$dotfilesDir"/.vim/bundle || exit
-git clone git://github.com/VundleVim/Vundle.vim.git
+git clone https://github.com/VundleVim/Vundle.vim.git
 \vim +PluginInstall +qall
 
 mkdir -p "$HOME/.config/nvim"
