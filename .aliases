@@ -90,26 +90,6 @@ alias ping="ping -c 5"
 # load zsh functions
 for f in ~/.zsh_functions/*; do source "$f"; done
 
-# read TODOs and Reminders
-echo -n "Do you want to check for reminders? y/n? : "
-read -r checkingforapprovalbytheuser
-if [ "$checkingforapprovalbytheuser" = "y" ]; then
-
-    if [ -f ~/Desktop/Reminders.txt ]; then
-        cat ~/Desktop/Reminders.txt
-        if type vim >/dev/null 2>&1; then
-            alias reminders='vim ~/Desktop/Reminders.txt'
-        elif type vi >/dev/null 2>&1; then
-            alias reminders='vi ~/Desktop/Reminders.txt'
-        elif type nano >/dev/null 2>&1; then
-            alias reminders='nano ~/Desktop/Reminders.txt'
-        else
-            echo "Please install vi, vim, or nano to edit reminders using \"reminders\" alias "
-        fi
-    fi
-
-fi
-
 # Custom paths/exports
 
 if [ -f /usr/bin/nvim ]; then
