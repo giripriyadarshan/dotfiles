@@ -5,7 +5,7 @@ source menu.sh
 
 clear
 
-case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "* Ubuntu Cloud VM" "* WSL-Ubuntu" "* Manjaro Linux" "CANCEL") in
+case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm Desktop" "* Ubuntu Cloud VM" "* WSL-Ubuntu" "* Manjaro Linux" "* Arch i3" "CANCEL") in
 0)
     # install apt packages for Ubuntu x86 Installation only --------------------- Ubuntu x86
     sudo apt update && sudo apt full-upgrade -y
@@ -98,4 +98,21 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
     cargo install cargo-watch
     ;;
 
+7)
+    # install pacman packages for Arch i3 installation only ------------------------------------- Arch i3
+    sudo pacman -Syyu
+    for f in arch-i3/*.txt; do
+        while IFS= read -r app; do
+            sudo pacman -S --needed --noconfirm "$app"
+        done < <(grep -v '^#' "$f")
+    done
+
+    for f in arch-i3/*.sh; do bash "$f" -H; done
+
+    # Most of the rust packages are available in the AUR .... so no need to build it using cargo
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+    cargo install cargo-update
+    cargo install cargo-watch
+    ;;
 esac

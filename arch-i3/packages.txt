@@ -1,0 +1,15 @@
+# utils
+starship
+bat
+diesel-cli
+exa
+fd
+ripgrep
+skim
+
+# applications
+discord
+github-cli
+arduino-cli
+vim
+neovim
