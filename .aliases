@@ -25,6 +25,12 @@ if type bat >/dev/null 2>&1; then
     alias cat="bat"
 fi
 
+
+RG_SK_COMMAND='rg --color=always --line-number "{}"'
+if type sk >/dev/null 2>&1; then
+    alias get="sk --ansi -i -c '$RG_SK_COMMAND'"
+fi
+
 ## apt related
 if type apt >/dev/null 2>&1; then
     alias ulist='sudo apt list --upgradable'
