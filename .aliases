@@ -26,11 +26,6 @@ if type bat >/dev/null 2>&1; then
 fi
 
 
-RG_SK_COMMAND='rg --color=always --line-number "{}"'
-if type sk >/dev/null 2>&1; then
-    alias get="sk --ansi -i -c '$RG_SK_COMMAND'"
-fi
-
 ## apt related
 if type apt >/dev/null 2>&1; then
     alias ulist='sudo apt list --upgradable'
@@ -50,7 +45,7 @@ if [ "$(ps -o comm= -p "$$")" = "zsh" ]; then
     _upgrade() {
         compadd list now
     }
-compdef _upgrade upgrade
+    compdef _upgrade upgrade
 fi
 
 ## init shells
@@ -65,9 +60,16 @@ alias fucking=sudo
 if type rg >/dev/null 2>&1; then
     alias aliases='rg "alias\s.*=" ~/.aliases ~/.bashrc ~/.zshrc'
     alias paths='rg "export\s" ~/.aliases ~/.bashrc ~/.zshrc && rg "source\s" ~/.aliases ~/.bashrc ~/.zshrc'
+    SK_COMMAND='rg --color=always --line-number "{}"'
 else
     alias aliases='grep "alias\s.*=" ~/.aliases ~/.bashrc ~/.zshrc'
     alias paths='grep "export\s" ~/.aliases && grep "source\s" ~/.aliases ~/.bashrc ~/.zshrc'
+    SK_COMMAND='grep -rI --color=always --line-number "{}"'
+fi
+
+if type sk >/dev/null 2>&1; then
+    alias search="sk --ansi -i -c '$SK_COMMAND'"
+    alias open="vim \$(search | cut -d ':' -f1)"
 fi
 
 ## arduino-cli
