@@ -69,7 +69,6 @@ fi
 
 if type sk >/dev/null 2>&1; then
     alias search="sk --ansi -i -c '$SK_COMMAND'"
-    alias open="vim \$(search | cut -d ':' -f1)"
 fi
 
 ## arduino-cli
