@@ -57,10 +57,10 @@ fi
 xinput disable 'ELAN Touchscreen'
 xinput --set-prop 'Synaptics s3203' 'libinput Natural Scrolling Enabled' 1
 
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+
 if type autorandr >/dev/null 2>&1; then
     autorandr --change
 fi
-
-barrier &
 
 exec i3
