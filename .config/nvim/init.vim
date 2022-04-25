@@ -126,3 +126,5 @@ nnoremap <C-Right> :tabnext<CR>
 
 
 set directory^=$HOME/.vim/swap//
+
+set autoread
