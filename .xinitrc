@@ -38,16 +38,16 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
-if [[ $DISABLE_TOUCHSCREEN == 1 ]]; then
+if [ "$DISABLE_TOUCHSCREEN" = 1 ]; then
     touchscreen_id=$(xinput list | grep -i "touchscreen" | sed 's/.*=//' | cut -f 1)
-    xinput disable $touchscreen_id
+    xinput disable "$touchscreen_id"
 fi
-if [[ $IS_SYNAPTICS_TOUCHPAD == 1 ]]; then
+if [ "$IS_SYNAPTICS_TOUCHPAD" = 1 ]; then
     touchpad_id=$(xinput list | grep -m 1 -i "synaptics" | sed 's/.*=//' | cut -f 1)
-    xinput --set-prop $touchpad_id 'libinput Natural Scrolling Enabled' 1
+    xinput --set-prop "$touchpad_id" 'libinput Natural Scrolling Enabled' 1
 fi
 
-if [[ $IS_NVIDIA_GPU == 1 ]]; then
+if [ "$IS_NVIDIA_GPU" = 1 ]; then
     xrandr --setprovideroutputsource modesetting NVIDIA-0
 fi
 

@@ -67,6 +67,7 @@ else
     SK_COMMAND='grep -rI --color=always --line-number "{}"'
 fi
 
+# shellcheck disable=SC2139
 if type sk >/dev/null 2>&1; then
     alias search="sk --ansi -i -c '$SK_COMMAND'"
 fi
