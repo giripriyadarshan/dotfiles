@@ -88,7 +88,9 @@ function mkcd() {
 }
 
 # wifi keys
-alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
+if [ -d "/etc/NetworkManager/system-connections" ]; then
+    alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
+fi
 
 # misc
 alias ping="ping -c 5"

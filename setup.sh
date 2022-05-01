@@ -114,5 +114,7 @@ case $(select_opt "* Ubuntu x86" "* RPi Headless" "* RPi Desktop" "* Ubuntu Arm 
 
     cargo install cargo-update
     cargo install cargo-watch
+    
+    bash userenv.sh
     ;;
 esac
