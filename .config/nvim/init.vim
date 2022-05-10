@@ -51,6 +51,8 @@ Plugin 'kyazdani42/nvim-web-devicons'
 
 Plugin 'nvim-lualine/lualine.nvim'
 
+Plugin 'Yggdroot/indentLine'
+
 
 " All of your Plugins must be added before the following line
 
