@@ -52,11 +52,13 @@ mkdir -p "$dotfilesDir"/.vim/swap
 linkDotfile .zsh_functions
 
 mkdir -p "$HOME/.config/i3"
-mkdir -p "$home/.config/i3status"
-mkdir -p "$home/.config/alacritty"
+mkdir -p "$HOME/.config/i3status"
+mkdir -p "$HOME/.config/alacritty"
+mkdir -p "$HOME/.config/i3status-rust"
 
 linkDotfile ".config/i3/config"
 linkDotfile ".config/i3status/config"
 linkDotfile ".config/alacritty/alacritty.yml"
+linkDotfile ".config/i3status-rust/config.toml"
 linkDotfile ".config/alacritty/dracula.yml"
 linkDotfile ".zlogin"
