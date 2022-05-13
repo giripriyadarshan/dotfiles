@@ -10,6 +10,7 @@ network-manager-applet
 pulseaudio
 pulseaudio-bluetooth
 pulseaudio-equalizer
+pulseaudio-jack
 
 # utils
 alacritty
@@ -19,6 +20,8 @@ i3exit
 i3lock
 starship
 bat
+networkmanager
+network-manager-applet
 diesel-cli
 exa
 fd
@@ -27,6 +30,9 @@ skim
 neofetch
 nitrogen
 xclip
+skim
+upower
+autorandr
 
 # applications
 discord
@@ -37,3 +43,5 @@ neovim
 
 # fonts
 ttf-font-awesome
+powerline-fonts
+
