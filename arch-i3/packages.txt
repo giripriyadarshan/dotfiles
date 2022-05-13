@@ -1,4 +1,22 @@
+# main
+i3-gaps
+i3status-rust
+i3status
+rofi
+
+# network
+networkmanager
+network-manager-applet
+pulseaudio
+pulseaudio-bluetooth
+pulseaudio-equalizer
+
 # utils
+alacritty
+gnome-terminal
+htop
+i3exit
+i3lock
 starship
 bat
 diesel-cli
@@ -6,6 +24,9 @@ exa
 fd
 ripgrep
 skim
+neofetch
+nitrogen
+xclip
 
 # applications
 discord
@@ -13,3 +34,6 @@ github-cli
 arduino-cli
 vim
 neovim
+
+# fonts
+ttf-font-awesome
