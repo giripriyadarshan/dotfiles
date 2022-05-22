@@ -80,8 +80,6 @@ bindsym $mod+d exec rofi -modi drun -show drun
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-bindsym --whole-window Control+button1 exec right_click
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
