@@ -133,6 +133,9 @@ set directory^=$HOME/.vim/swap//
 
 set autoread
 
+hi Normal guibg=NONE ctermbg=NONE                    
+let t:is_transparent = 0
+
 lua << END
 require('lualine').setup()
 END

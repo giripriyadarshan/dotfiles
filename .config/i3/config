@@ -40,6 +40,8 @@ exec --no-startup-id nitrogen --restore
 
 exec --no-startup-id libinput-gestures
 
+exec --no-startup-id picom
+
 
 default_border pixel 1
 default_floating_border normal
@@ -241,6 +243,7 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+# client.focused_inactive #000000 #000000 #e0e0e0 #000000
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
@@ -253,14 +256,14 @@ for_window [class="ProtonVPN"] floating enable border pixel 1
 
 bar {
     font pango:DejaVu Sans Mono, Font Awesome 6 Free 
-    i3bar_command i3bar
-    status_command i3status-rs
+        i3bar_command i3bar --transparency
+        status_command i3status-rs
 
 
-    colors {
-            background #282A36
+        colors {
+           background #282A36
                 statusline #F8F8F2
-                separator  #44475A
+              separator  #44475A
 
                 focused_workspace  #44475A #44475A #F8F8F2
                 active_workspace   #282A36 #44475A #F8F8F2
