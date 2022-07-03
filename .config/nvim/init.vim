@@ -53,6 +53,7 @@ Plugin 'nvim-lualine/lualine.nvim'
 
 Plugin 'Yggdroot/indentLine'
 
+Plugin 'dense-analysis/ale'
 
 " All of your Plugins must be added before the following line
 
@@ -135,6 +136,9 @@ set autoread
 
 hi Normal guibg=NONE ctermbg=NONE                    
 let t:is_transparent = 0
+
+
+let g:ale_linters = {'rust': ['analyzer']}
 
 lua << END
 require('lualine').setup()

@@ -57,7 +57,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 
 # pulse audio thingies
-exec --no-startup-id pulseaudio
+exec --no-startup-id pulseaudio --start
 exec --no-startup-id pasystray
 
 # Use Mouse+$mod to drag floating windows to their wanted position
