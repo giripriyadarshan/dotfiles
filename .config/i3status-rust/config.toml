@@ -39,7 +39,8 @@ warning = 40
 block = "custom"
 cycle = [ 
 'echo India $(date +"%a %d %B %l:%M %p")', 
-'echo Germany $(TZ=Europe/Berlin date +"%a %d %B %l:%M %p")'
+'echo Germany $(TZ=Europe/Berlin date +"%a %d %B %l:%M %p")',
+'echo New York $(TZ=America/New_York date +"%a %d %B %l:%M %p")'
 ]
 on_click = "<command>"
 interval = 10
