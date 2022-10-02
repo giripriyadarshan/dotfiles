@@ -24,3 +24,8 @@
 	ui = auto
 [init]
 	defaultBranch = main
+
+[alias]
+	total = "!f() { git log $@ --numstat | perl -ne '$i+=$1 and $d+=$2 if /^(\\d+)\\s+(\\d+)/; END { print \"$i insertion(s), $d deletion(s)\n\"}'; }; f"
+[safe]
+	directory = /opt/flutter

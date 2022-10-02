@@ -5,7 +5,7 @@ icons = "awesome6"
 block = "net"
 format = "{ssid} {signal_strength} {ip}"
 format_alt = "{ssid} {signal_strength} {ipv6}" 
-interval = 5
+interval = 20
 
 [[block]]
 block = "memory"
@@ -34,6 +34,7 @@ alert_absolute = true
 unit = "GB"
 alert = 50
 warning = 40
+interval = 50
 
 [[block]]
 block = "custom"

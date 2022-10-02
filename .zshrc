@@ -137,3 +137,5 @@ fi
 if [ -f "/usr/bin/google-chrome-stable" ]; then
     export CHROME_EXECUTABLE=google-chrome-stable
 fi
+
+source /home/gp/.config/broot/launcher/bash/br

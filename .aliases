@@ -4,10 +4,10 @@
 
 ## Directories listing
 if type exa >/dev/null 2>&1; then
-    alias ls='exa --group-directories-first'
+    alias ls='exa --group-directories-first --icons'
     alias lg="ls"
-    alias lso='exa --group-directories-first --oneline'
-    alias lst='exa --group-directories-first --tree --long --header'
+    alias lso='exa --group-directories-first --oneline --icons'
+    alias lst='exa --group-directories-first --tree --long --header --icons'
     alias lls='exa --group-directories-first --header --long --git --icons -F'
 fi
 

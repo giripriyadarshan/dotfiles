@@ -106,3 +106,5 @@ fi
 
 source "$HOME/.cargo/env"
 . "$HOME/.cargo/env"
+
+source /home/gp/.config/broot/launcher/bash/br
