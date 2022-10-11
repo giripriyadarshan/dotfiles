@@ -7,10 +7,7 @@ rofi
 # network
 networkmanager
 network-manager-applet
-pulseaudio
-pulseaudio-bluetooth
-pulseaudio-equalizer
-pulseaudio-jack
+pipewire
 
 # utils
 alacritty
