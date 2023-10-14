@@ -110,7 +110,7 @@ elif [ -f /usr/bin/vim ] && alias vi='vim'; then
 fi
 
 ## RPi Pico SDK Development variables
-export PICO_SDK_PATH=~/pico-setup/pico/pico-sdk
-export PICO_EXAMPLES_PATH=~/pico-setup/pico/pico-examples
-export PICO_EXTRAS_PATH=~/pico-setup/pico/pico-extras
-export PICO_PLAYGROUND_PATH=~/pico-setup/pico/pico-playground
+export PICO_SDK_PATH=~/git-clones/pico/pico-sdk
+export PICO_EXAMPLES_PATH=~/git-clones/pico/pico-examples
+export PICO_EXTRAS_PATH=~/git-clones/pico/pico-extras
+export PICO_PLAYGROUND_PATH=~/git-clones/pico/pico-playground
