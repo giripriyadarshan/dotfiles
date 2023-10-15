@@ -3,17 +3,17 @@
 # Custom aliases
 
 ## Directories listing
-if type exa >/dev/null 2>&1; then
-    alias ls='exa --group-directories-first --icons'
+if type eza >/dev/null 2>&1; then
+    alias ls='eza --group-directories-first --icons'
     alias lg="ls"
-    alias lso='exa --group-directories-first --oneline --icons'
-    alias lst='exa --group-directories-first --tree --long --header --icons'
-    alias lls='exa --group-directories-first --header --long --git --icons -F'
+    alias lso='eza --group-directories-first --oneline --icons'
+    alias lst='eza --group-directories-first --tree --long --header --icons'
+    alias lls='eza --group-directories-first --header --long --git --icons -F'
 fi
 
 if type fd >/dev/null 2>&1; then
-    if type exa >/dev/null 2>&1; then
-        alias usb='fd ttyUSB /dev/ -X exa -lh && echo && fd ACM /dev/ -X exa -lh'
+    if type eza >/dev/null 2>&1; then
+        alias usb='fd ttyUSB /dev/ -X eza -lh && echo && fd ACM /dev/ -X eza -lh'
     else
         alias usb='fd ttyUSB /dev/ -X ls -lh && echo && fd ACM /dev/ -X ls -lh'
     fi
