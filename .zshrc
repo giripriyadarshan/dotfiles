@@ -126,6 +126,7 @@ source $HOME/.aliases
 source $HOME/.cargo/env
 eval "$(fnm env --use-on-cd)"
 fpath=($HOME/completion_zsh $fpath)
+source ~/.bun/bin
 
 autoload -U compinit
 compinit -i
@@ -150,3 +151,10 @@ export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
+
+# bun completions
+[ -s "/home/gp/.bun/_bun" ] && source "/home/gp/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
