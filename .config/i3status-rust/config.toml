@@ -6,7 +6,7 @@ icons = "awesome6"
 [[block]]
 block = "net"
 format = "$icon $device $ssid $signal_strength $ip "
-format_alt = "$icon $device $ssid $signal_strength $ipv6 "
+format_alt = "$icon $ipv6 "
 interval = 20
 
 [[block]]
