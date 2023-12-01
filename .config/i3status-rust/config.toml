@@ -5,14 +5,14 @@ icons = "awesome6"
 
 [[block]]
 block = "net"
-format = "$icon$ssid $signal_strength $ip "
-format_alt = "$icon$ssid $signal_strength $ipv6 "
+format = "$icon $device $ssid $signal_strength $ip "
+format_alt = "$icon $device $ssid $signal_strength $ipv6 "
 interval = 20
 
 [[block]]
 block = "memory"
 format = "$icon$mem_used/$mem_avail($mem_used_percents) "
-format_alt = "$icon$swap_used/$swap_total($swap_used_percents) "
+format_alt = "$icon_swap$swap_used/$swap_total($swap_used_percents) "
 interval = 5
 warning_mem = 80
 warning_swap = 80
@@ -29,11 +29,11 @@ block = "disk_space"
 path = "/"
 info_type = "available"
 format = "$icon $available free"
-#alert_absolute = true
-#unit = "GB"
+format_alt = "$icon $used used"
+alert_unit = "GB"
 alert = 50
 warning = 40
-interval = 50
+interval = 60
 
 [[block]]
 block = "xrandr"
@@ -52,9 +52,10 @@ cmd = "<command>"
 
 [[block]]
 block = "battery"
-missing_format = ""
 format = "$icon $percentage {$time |} {$power |}"
+missing_format = ""
 interval = 5
+driver = "upower"
 #hide_missing = true
 
 
