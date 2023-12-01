@@ -48,7 +48,7 @@ cycle = [
 interval = 10
 [[block.click]]
 button = "left"
-cmd = "<command>"
+action = "cycle"
 
 [[block]]
 block = "battery"
