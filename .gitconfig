@@ -2,6 +2,7 @@
 	name = giripriyadarshan
 	email = 43517605+giripriyadarshan@users.noreply.github.com
 	username = giripriyadarshan
+    signingkey = ~/.ssh/id_ed25519.pub
 
 [core]
 	editor = vim
@@ -29,4 +30,10 @@
 [alias]
 	total = "!f() { git log $@ --numstat | perl -ne '$i+=$1 and $d+=$2 if /^(\\d+)\\s+(\\d+)/; END { print \"$i insertion(s), $d deletion(s)\n\"}'; }; f"
 [safe]
-	directory = /opt/flutter
+    directory = /opt/flutter
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
