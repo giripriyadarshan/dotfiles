@@ -1,0 +1,26 @@
+import = ["/home/gp/.config/alacritty/dracula.toml"]
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "none"
+opacity = 0.8
+decorations_theme_variant = "Dark"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 0
+y = 0
+
+[window.position]
+x = 0
+y = 0
