@@ -158,3 +158,5 @@ setopt HIST_IGNORE_ALL_DUPS
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+source /home/gp/.config/broot/launcher/bash/br

@@ -109,6 +109,10 @@ elif [ -f /usr/bin/vim ] && alias vi='vim'; then
     export EDITOR=vim
 fi
 
+if [ -d "$HOME/bin" ]; then
+    export PATH="$PATH:$HOME/dotfiles/bin"
+fi
+
 ## RPi Pico SDK Development variables
 export PICO_SDK_PATH=~/git-clones/pico/pico-sdk
 export PICO_EXAMPLES_PATH=~/git-clones/pico/pico-examples
