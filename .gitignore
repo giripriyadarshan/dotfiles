@@ -8,3 +8,7 @@ themes/*
 .vim/swap/*
 .vim/pack/*
 status/
+bin/fleet
+bin/rustrover
+bin/studio
+bin/webstorm
