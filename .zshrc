@@ -80,7 +80,6 @@ plugins=(
     rust
     history
     alias-finder
-    ripgrep
     nvm
     docker
     docker-compose
@@ -160,3 +159,28 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 source /home/gp/.config/broot/launcher/bash/br
+export PATH=$HOME/.local/bin:$PATH
+
+#### ------------------------------
+
+#### exa - Color Scheme Definitions
+
+#### ------------------------------
+
+export EXA_COLORS="\
+uu=36:\
+gu=37:\
+sn=32:\
+sb=32:\
+da=34:\
+ur=34:\
+uw=35:\
+ux=36:\
+ue=36:\
+gr=34:\
+gw=35:\
+gx=36:\
+tr=34:\
+tw=35:\
+tx=36:"
+

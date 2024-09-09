@@ -68,6 +68,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+t exec alacritty
 bindsym $mod+Shift+Return exec warp-terminal
+bindsym $mod+Shift+t exec warp-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -250,7 +251,7 @@ client.background       #6272A4
 
 # Open specific apps in floating mode
 for_window [class="Galculator"] floating enable border pixel 1
-for_window [class="ProtonVPN"] floating enable border pixel 1
+for_window [class="Protonvpn-app"] floating enable border pixel 1
 
 bar {
     font pango:DejaVu Sans Mono, Font Awesome 6 Free 9

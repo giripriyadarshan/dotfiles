@@ -5,9 +5,15 @@ icons = "awesome6"
 
 [[block]]
 block = "net"
-format = "$icon $device $ssid $signal_strength $ip "
+format = "$icon $device $ip "
 format_alt = "$icon $ipv6 "
 interval = 20
+
+[[block]]
+block = "privacy"
+[[block.driver]]
+name = "pipewire"
+display = "name"
 
 [[block]]
 block = "memory"
